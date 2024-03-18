@@ -3,7 +3,7 @@ type themeListProps<T> = {
   onThemeClick: (theme: T) => void;
 };
 
-export default function ThemesList<T>({
+export default function ThemesList<T extends React.ReactNode>({
   themeOptions,
   onThemeClick,
 }: themeListProps<T>) {
