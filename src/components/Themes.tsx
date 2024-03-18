@@ -2,7 +2,7 @@ import { useState } from "react";
 import ThemesList from "./ThemesList";
 
 export default function Themes() {
-  const [theme, setTheme] = useState("");
+  const [theme, setTheme] = useState("light");
   const THEMES = ["light", "dark", "system"];
 
   return (
