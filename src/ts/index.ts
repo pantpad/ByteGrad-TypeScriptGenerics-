@@ -26,3 +26,17 @@ const getItemIndexFromArrArrow = <T>(arr: T[], value: T) =>
 
 console.log(getItemIndexFromArr(arr, 88));
 console.log(getItemIndexFromArrArrow(arr, 88));
+
+//Function createArrayPair
+
+function createArrayPair<T, U>(input1: T, input2: U): [T, U] {
+  return [input1, input2];
+}
+
+//ARROW FUNCTION
+// const createArrayPair = <T, U>(input1: T, input2: U): [T, U] => [
+//   input1,
+//   input2,
+// ];
+
+console.log(createArrayPair("hello", 10));
