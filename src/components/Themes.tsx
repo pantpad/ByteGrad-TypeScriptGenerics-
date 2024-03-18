@@ -10,7 +10,10 @@ export default function Themes() {
       <section style={{ textAlign: "center" }}>
         <h1>themes</h1>
         <h2>Current Theme: {theme}</h2>
-        <ThemesList themeOptions={THEMES} />
+        <ThemesList
+          themeOptions={THEMES}
+          onThemeClick={(theme) => setTheme(theme)}
+        />
       </section>
     </>
   );

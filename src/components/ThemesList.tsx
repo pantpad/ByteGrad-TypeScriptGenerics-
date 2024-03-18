@@ -1,8 +1,12 @@
 type themeListProps<T> = {
   themeOptions: T[];
+  onThemeClick: (theme: T) => void;
 };
 
-export default function ThemesList<T>({ themeOptions }: themeListProps<T>) {
+export default function ThemesList<T>({
+  themeOptions,
+  onThemeClick,
+}: themeListProps<T>) {
   return (
     <ul
       style={{
@@ -13,7 +17,7 @@ export default function ThemesList<T>({ themeOptions }: themeListProps<T>) {
     >
       {themeOptions.map((theme, index) => (
         <li key={index}>
-          <button onClick={() => setTheme(theme)}>{theme}</button>
+          <button onClick={() => onThemeClick(theme)}>{theme}</button>
         </li>
       ))}
     </ul>
