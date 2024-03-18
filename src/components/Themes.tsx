@@ -1,27 +1,16 @@
 import { useState } from "react";
-
-const THEMES = ["light", "dark", "system"];
+import ThemesList from "./ThemesList";
 
 export default function Themes() {
   const [theme, setTheme] = useState("");
+  const THEMES = ["light", "dark", "system"];
+
   return (
     <>
       <section style={{ textAlign: "center" }}>
         <h1>themes</h1>
         <h2>Current Theme: {theme}</h2>
-        <ul
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
-          {THEMES.map((theme, index) => (
-            <li key={index}>
-              <button onClick={() => setTheme(theme)}>{theme}</button>
-            </li>
-          ))}
-        </ul>
+        <ThemesList themeOptions={THEMES} />
       </section>
     </>
   );
