@@ -1,12 +1,8 @@
-// type themeListProps = {
-//   themeOptions: string[];
-// };
-
-export default function ThemesList({
-  themeOptions,
-}: {
+type themeListProps = {
   themeOptions: string[];
-}) {
+};
+
+export default function ThemesList({ themeOptions }: themeListProps) {
   return (
     <ul
       style={{
